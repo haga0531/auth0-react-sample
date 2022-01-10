@@ -9,17 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {!isAuthenticated ? (
-          <button
-            onClick={() =>
-              loginWithRedirect({
-                appState: {
-                  returnTo: `/register`,
-                },
-              })
-            }
-          >
-            Log in
-          </button>
+          <button onClick={() => loginWithRedirect()}>Log in</button>
         ) : (
           <button onClick={() => logout()}>Log out</button>
         )}
